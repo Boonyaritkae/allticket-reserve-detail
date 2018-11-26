@@ -1,4 +1,4 @@
-var HttpRequestModule = require('../modules/HttpRequestModule');
+var {HttpRequestModule} = require('../modules/HttpRequestModule');
 
 
 module.exports = class ReserveDetailModule extends HttpRequestModule {
