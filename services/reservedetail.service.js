@@ -17,7 +17,7 @@ module.exports = class ReserveDetailModule extends HttpRequestModule {
     resp = await this.getDataMemcached(this.memcachedKey);
     if (resp == null) {
       resp = await this.createHttp(process.env.URL_RESERVE_DETAIL, {
-        performId: this.performId
+       reserveId : this.reserveId
       }).post();
       return resp.data.code == 100 ? resp.data.data : null;
     }
