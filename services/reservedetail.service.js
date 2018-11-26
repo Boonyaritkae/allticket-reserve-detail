@@ -19,9 +19,10 @@ module.exports = class ReserveDetailModule extends HttpRequestModule {
       resp = await this.createHttp(process.env.URL_RESERVE_DETAIL, {
        reserveId : this.reserveId
       }).post();
+  
       return resp.data.code == 100 ? resp.data.data : null;
     }
-    return JSON.stringify(resp);
+    return resp;
   } catch (e) {
     throw e;
    }
